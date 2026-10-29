@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+<html lang="ro">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Fabrica de Capturi</title>
+
+<style>
+
+:root {
+
+  --dark: #173f2b;
+
+  --green: #24583c;
+
+  --gold: #c5a36b;
+
+  --cream: #f7f5ef;
+
+}
+
+* { box-sizing: border-box; }
+
+body {
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  background: var(--cream);
+
+  color: #202820;
+
+}
+
+header {
+
+  background: var(--dark);
+
+  color: white;
+
+  text-align: center;
+
+  padding: 28px 15px;
+
+}
+
+header h1 {
+
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 32px;
+
+}
+
+header p {
+
+  color: #e0cba5;
+
+  letter-spacing: 2px;
+
+  font-size: 12px;
+
+}
+
+nav {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  padding: 16px;
+
+  background: white;
+
+}
+
+nav a {
+
+  color: var(--dark);
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+}
+
+.hero {
+
+  text-align: center;
+
+  padding: 50px 20px;
+
+  background: #e8e4d8;
+
+}
+
+.hero h2 {
+
+  font: 32px Georgia, serif;
+
+}
+
+.hero p {
+
+  line-height: 1.7;
+
+}
+
+.btn {
+
+  display: inline-block;
+
+  background: var(--dark);
+
+  color: white;
+
+  padding: 12px 18px;
+
+  text-decoration: none;
+
+  border-radius: 5px;
+
+  margin-top: 10px;
+
+}
+
+.btn:hover {
+
+  background: var(--green);
+
+}
+
+section {
+
+  padding: 30px 18px;
+
+  max-width: 1100px;
+
+  margin: auto;
+
+}
+
+section h2 {
+
+  text-align: center;
+
+  font: 28px Georgia, serif;
+
+  margin-bottom: 25px;
+
+}
+
+.categories {
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+}
+
+.pill {
+
+  border: 1px solid var(--gold);
+
+  padding: 10px 14px;
+
+  border-radius: 25px;
+
+  background: white;
+
+  font-size: 13px;
+
+}
+
+.products {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+
+  gap: 18px;
+
+}
+
+.product {
+
+  background: white;
+
+  padding: 18px;
+
+  border: 1px solid #e7e2d7;
+
+  border-radius: 8px;
+
+}
+
+.product-image {
+
+  height: 150px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f3f0e8;
+
+  border-radius: 6px;
+
+  font-size: 65px;
+
+}
+
+.product h3 {
+
+  color: var(--dark);
+
+}
+
+.product p {
+
+  line-height: 1.5;
+
+  font-size: 14px;
+
+}
+
+.price {
+
+  color: #8d6b36;
+
+  font-weight: bold;
+
+}
+
+.container {
+
+  width: 125px;
+
+  height: 110px;
+
+  background: #fdfcf7;
+
+  border: 3px solid var(--gold);
+
+  border-radius: 10px 10px 15px 15px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+}
+
+.lid {
+
+  height: 17px;
+
+  background: #c9c8bf;
+
+  border-bottom: 2px solid #aaa18c;
+
+}
+
+.sticker {
+
+  background: var(--dark);
+
+  color: white;
+
+  padding: 7px 2px;
+
+  font-size: 9px;
+
+  font-weight: bold;
+
+}
+
+.bottle {
+
+  width: 85px;
+
+  height: 125px;
+
+  background: #f0e000;
+
+  border: 2px solid var(--gold);
+
+  border-radius: 12px 12px 15px 15px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+}
+
+.cap {
+
+  width: 45px;
+
+  height: 17px;
+
+  margin: auto;
+
+  background: #303a31;
+
+}
+
+.contact {
+
+  text-align: center;
+
+  padding: 25px;
+
+  background: #e1e9df;
+
+  border-radius: 8px;
+
+}
+
+footer {
+
+  background: var(--dark);
+
+  color: white;
+
+  text-align: center;
+
+  padding: 25px;
+
+  line-height: 1.8;
+
+  font-size: 13px;
+
+}
+
+.note {
+
+  font-size: 12px;
+
+  color: #667066;
+
+  text-align: center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <h1>🎣 Fabrica de Capturi</h1>
+
+  <p>CALITATE • PASIUNE • CAPTURI FRUMOASE</p>
+
+</header>
+
+<nav>
+
+  <a href="#acasa">Acasă</a>
+
+  <a href="#categorii">Categorii</a>
+
+  <a href="#produse">Produse</a>
+
+  <a href="#contact">Contact</a>
+
+</nav>
+
+<div class="hero" id="acasa">
+
+  <h2>Totul pentru următoarea ta captură!</h2>
+
+  <p>Produse pentru pescuit, momeli și accesorii pentru partide reușite.</p>
+
+  <a class="btn" href="#produse">Vezi produsele</a>
+
+</div>
+
+<section id="categorii">
+
+  <h2>Categorii</h2>
+
+  <div class="categories">
+
+    <span class="pill">Riguri</span>
+
+    <span class="pill">Method feeder</span>
+
+    <span class="pill">Bag-uri PVA</span>
+
+    <span class="pill">Wafters-uri</span>
+
+    <span class="pill">Gel Neon</span>
+
+  </div>
+
+</section>
+
+<section id="produse">
+
+  <h2>Produsele noastre</h2>
+
+  <div class="products">
+
+    <div class="product">
+
+      <div class="product-image">🪝</div>
+
+      <h3>1. Riguri</h3>
+
+      <p>Riguri pentru pescuit la crap, pregătite pentru partide reușite.</p>
+
+      <p class="price">Preț: de completat</p>
+
+      <a class="btn" href="#contact">Comandă</a>
+
+    </div>
+
+    <div class="product">
+
+      <div class="product-image">🎣</div>
+
+      <h3>2. Method feeder Preston</h3>
+
+      <p>Method feeder cu coșuleț interschimbabil, pentru schimbare rapidă.</p>
+
+      <p class="price">Preț: de completat</p>
+
+      <a class="btn" href="#contact">Comandă</a>
+
+    </div>
+
+    <div class="product">
+
+      <div class="product-image">🟢 🧺</div>
+
+      <h3>3. Bag-uri PVA cu peleți</h3>
+
+      <p>Pungi PVA cu peleți pentru o prezentare concentrată a nadei.</p>
+
+      <p class="price">Preț: de completat</p>
+
+      <a class="btn" href="#contact">Comandă</a>
+
+    </div>
+
+    <div class="product">
+
+      <div class="product-image">
+
+        <div class="container">
+
+          <div class="lid"></div>
+
+          <div class="sticker">FABRICA DE CAPTURI</div>
+
+          <div style="font-size:24px; padding-top:5px;">🟡</div>
+
+          <strong style="font-size:11px;">WAFTERS</strong>
+
+        </div>
+
+      </div>
+
+      <h3>4. Wafters-uri</h3>
+
+      <p>Momeli de cârlig pentru pescuit la crap. Recipient ilustrativ cu eticheta magazinului.</p>
+
+      <p class="price">Preț: de completat</p>
+
+      <a class="btn" href="#contact">Comandă</a>
+
+    </div>
+
+    <div class="product">
+
+      <div class="product-image">
+
+        <div class="bottle">
+
+          <div class="cap"></div>
+
+          <div class="sticker">FABRICA DE CAPTURI</div>
+
+          <strong style="display:block; padding-top:10px; font-size:12px;">GEL NEON</strong>
+
+          <div style="font-size:24px; padding-top:5px;">🟡</div>
+
+        </div>
+
+      </div>
+
+      <h3>5. Gel Neon</h3>
+
+      <p>Gel atractant pentru partidele de pescuit. Recipient ilustrativ cu eticheta magazinului.</p>
+
+      <p class="price">Preț: de completat</p>
+
+      <a class="btn" href="#contact">Comandă</a>
+
+    </div>
+
+  </div>
+
+  <p class="note">
+
+    Simbolurile sunt provizorii. Fotografiile reale ale produselor pot fi adăugate ulterior.
+
+  </p>
+
+</section>
+
+<section id="contact">
+
+  <div class="contact">
+
+    <h2>Comenzi și contact</h2>
+
+    <p>Pentru comenzi și informații despre produse, contactează-ne pe WhatsApp.</p>
+
+    <a class="btn" href="https://wa.me/NUMARUL_TAU" target="_blank" rel="noopener">
+
+      Comandă pe WhatsApp
+
+    </a>
+
+    <p class="note">
+
+      Înlocuiește NUMARUL_TAU cu numărul tău în format internațional,
+
+      fără semnul + sau spații.
+
+    </p>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <strong>Fabrica de Capturi</strong><br>
+
+  Magazin online • Comenzi prin WhatsApp<br>
+
+  © 2026 Fabrica de Capturi
+
+</footer>
+
+</body>
+
+</html>
